@@ -1,0 +1,34 @@
+- name: Car Details
+  action: # where to send the form-data when the form is submitted. Absolute URL | Relative URL
+  method: # get | post
+  layout:  # horizontal | _blank
+  hasLabel: # true | _blank
+  fields: 
+    - type: select # email | number | password | search | text | select | textarea | divider
+      name: Brand
+      placeholder: # Field Placeholder | Will defaults to "Enter or Select + Field Name"
+      value: 
+      icon:  
+      helper: 
+      list-value: # for selet option only
+    - type: select # email | number | password | search | text | select | textarea | divider
+      name: Model
+      placeholder: # Field Placeholder | Will defaults to "Enter or Select + Field Name"
+      value: 
+      icon:  
+      helper: 
+      list-value: # for selet option only
+    - type: select # email | number | password | search | text | select | textarea | divider
+      name: Year
+      placeholder: # Field Placeholder | Will defaults to "Enter or Select + Field Name"
+      value: 
+      icon:  
+      helper: 
+      list-value: # for selet option only
+    - type: select # email | number | password | search | text | select | textarea | divider
+      name: Variant
+      placeholder: # Field Placeholder | Will defaults to "Enter or Select + Field Name"
+      value: 
+      icon:  
+      helper: 
+      list-value: # for selet option only

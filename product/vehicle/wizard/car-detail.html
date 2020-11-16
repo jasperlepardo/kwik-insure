@@ -1,0 +1,12 @@
+---
+layout: default
+layout-type: #container | container-fluid
+custom-stylesheet: 
+transition: fade
+---
+
+<div class="heading text-center">
+  <h1 class="heading-title h3">Tell us about your vehicle.</h1>
+</div>
+{% include components/organisms/form.html data=site.data.form.car-details form=edit-only %}
+<a class="btn btn-primary btn-lg" href="">Next</a>

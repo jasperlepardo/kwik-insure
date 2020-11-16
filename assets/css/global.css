@@ -1,10 +1,24 @@
 body {
     font-family: 'Work Sans', sans-serif;
+    padding-top: 56px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 72px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    body {
+        zoom: 112%;
+    }
 }
 
 .wrapper {
     /* height: 100vh; */
-    margin: 112px 0;
+    padding: 112px 0;
 }
 
 
@@ -20,4 +34,24 @@ body {
 .heading {
     margin-top: 80px;
     margin-bottom: 40px;
+}
+
+.card-deck .card {
+    border: none;
+}
+
+.card-header {
+    background-color: initial;
+    border-bottom: none;
+}
+
+.banner {
+    text-align: center;
+    padding: 24px 0;
+    background-color: #9199B6;
+}
+
+.banner h1 {
+    color: #ffffff;
+    margin-bottom: 0;
 }
