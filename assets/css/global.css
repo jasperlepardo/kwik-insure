@@ -6,3 +6,18 @@ body {
     /* height: 100vh; */
     margin: 112px 0;
 }
+
+
+#mega-banner {
+    height: 100vh;
+    background-image: url(/assets/img/BannerImage_R03_PV.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+.heading {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}

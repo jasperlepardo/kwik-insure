@@ -4,7 +4,7 @@ layout-type: #container | container-fluid
 custom-stylesheet: 
 ---
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="https://dummyimage.com/258x48/f1f2f3/aaaaaa&text=Kwik.Insure" alt="">
@@ -13,26 +13,12 @@ custom-stylesheet:
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Insurance</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Learn</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-      </ul>
-      <a class="btn btn-primary" href="">Login</a>
-    </div>  
-  </div>
-</nav>
+    {% include components/molecules/nav.html data=site.data.navigation.global %}
 
-<main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
+    <a class="btn btn-link" href="">Login</a>
+    <a class="btn btn-primary" href="">Signup</a>
+  </nav>
+
+<main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: 'container'}}{%endif%}">
   {{ content }}
 </main>

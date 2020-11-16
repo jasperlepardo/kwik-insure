@@ -1,7 +1,18 @@
-- class: 
+- class: "navbar-nav mr-auto"
   type: 
   menu:
-  - text: 
+  - text: Home
     icon: 
     url: 
-    status: 
+  - text: About
+    icon: 
+    url: 
+  - text: Product
+    icon: 
+    url: 
+  - text: Learn
+    icon: 
+    url: 
+  - text: Contact Us
+    icon: 
+    url: 
