@@ -8,7 +8,7 @@
       {% include components/atoms/fields/label.html %}
       <div class="{{ field.field-size | default: 'col-md-6' }}">
         {% if field.icon %}
-          <div class="form-icon form-icon-{{ field.icon-placement | default: "left" }}">
+          <div class="form-icon form-icon-{{ field.icon-placement | default: 'left' }}">
             {% include components/atoms/fields.html %}
             {% include components/atoms/fields/icon.html %}
           </div>
@@ -21,7 +21,7 @@
     <div class="form-group">
       {% include components/atoms/fields/label.html %}
         {% if field.icon %}
-          <div class="form-icon form-icon-{{ field.icon-placement | default: "left" }}">
+          <div class="form-icon form-icon-{{ field.icon-placement | default: 'left' }}">
             {% include components/atoms/fields.html %}
             {% include components/atoms/fields/icon.html %}
           </div>

@@ -21,6 +21,9 @@ body {
     padding: 112px 0;
 }
 
+.wrapper .heading {
+    margin-top: 0;
+}
 
 #mega-banner {
     height: 100vh;
@@ -32,8 +35,8 @@ body {
 
 
 .heading {
-    margin-top: 80px;
-    margin-bottom: 40px;
+    margin-top: clamp(40px, 8%, 80px);
+    margin-bottom: clamp(24px, 4%, 40px);
 }
 
 .card-deck .card {
@@ -54,4 +57,35 @@ body {
 .banner h1 {
     color: #ffffff;
     margin-bottom: 0;
+}
+
+.text-wrapper {
+    max-width: 545px;
+    float: right;
+    margin-right: 141px;
+}
+
+
+.nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.nav-tabs .nav-link {
+    white-space: nowrap;
+}
+
+dl {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: inherit;
+}
+
+
+.list-group-flush>.list-group-item {
+    padding-left: 0;
+    padding-right: 0;
 }
