@@ -18,6 +18,10 @@ custom-stylesheet:
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       {% include components/molecules/nav.html data=site.data.navigation.global %}
+
+      <div data-netlify-identity-menu></div>
+
+  
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#login-modal">Login</a>
       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#register-modal">Register</a>
     </div>
