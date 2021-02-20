@@ -1,0 +1,15 @@
+- class: "nav flex-column"
+  type: 
+  menu:
+  - text: Accident Insurance
+    icon: 
+    url: 
+  - text: Health Insurance
+    icon: 
+    url: 
+  - text: Life Insurance
+    icon: 
+    url: 
+  - text: Vehicle Insurance
+    icon: 
+    url: 

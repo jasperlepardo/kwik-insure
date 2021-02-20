@@ -1,0 +1,18 @@
+- class: "nav flex-column"
+  type: 
+  menu:
+  - text: About Us
+    icon: 
+    url: 
+  - text: Learn
+    icon: 
+    url: 
+  - text: Claims
+    icon: 
+    url: 
+  - text: Affiliate Program
+    icon: 
+    url: 
+  - text: Help Center
+    icon: 
+    url: 
