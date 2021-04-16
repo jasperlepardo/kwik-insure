@@ -9,7 +9,7 @@ custom-stylesheet:
     <a class="navbar-brand" href="#">
       <picture>
         <source media="(min-width: 992px)" srcset="https://dummyimage.com/258x48/f1f2f3/aaaaaa&text=Kwik.Insure">
-        <img src="https://dummyimage.com/174x32/f1f2f3/aaaaaa&text=Kwik.Insure" alt="">
+        <img src="https://dummyimage.com/128x24/f1f2f3/aaaaaa&text=Kwik.Insure" alt="">
       </picture>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,52 +18,91 @@ custom-stylesheet:
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       {% include components/molecules/nav.html data=site.data.navigation.global %}
-
-      <div data-netlify-identity-menu></div>
-
-  
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#login-modal">Login</a>
       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#register-modal">Register</a>
     </div>
   </div>
 </nav>
 
-<!-- <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: 'container'}}{%endif%}"> -->
-<main>
+<main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: 'container'}}{%endif%}">
   {{ content }}
 </main>
 
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-4">
-        <a class="navbar-brand" href="#">
-          <picture>
-            <source media="(min-width: 992px)" srcset="https://dummyimage.com/258x48/f1f2f3/aaaaaa&text=Kwik.Insure">
-            <img src="https://dummyimage.com/174x32/f1f2f3/aaaaaa&text=Kwik.Insure" alt="">
-          </picture>
-        </a>
+      <div class="col-lg-4">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://dummyimage.com/258x48/f1f2f3/aaaaaa&text=Kwik.Insure">
+          <img src="https://dummyimage.com/128x24/f1f2f3/aaaaaa&text=Kwik.Insure" alt="">
+        </picture>
+        <p>Kwik.insure is an online insurance marketplace that promises easy and reliable insurance.</p>
+        <p>Our purpose is simple: to get more people adequately insured. By working with trusted insurance companies, we envision our company to be the most valuable insurtech company in Southeast Asia. Our first goal is to bridge the insurance gap	 in the Philippines.</p>
+        <p>At Kwik.insure you can choose, compare, buy different insurance products from top insurers in the Philippines in a few clicks.</p>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8">
         <div class="row">
-          <div class="col">
-            <p>Products</p>
-            {% include components/molecules/nav.html data=site.data.navigation.footer.products %}
+          <div class="col-lg">
+            <p><b>Insurance Products</b></p>
+            <ul class="list-unstyled">
+              <li><a href="">Life Insurance</a></li>
+              <li><a href="">Health Insurance</a></li>
+              <li><a href="">Car Insurance</a></li>
+              <li><a href="">Accident Insurance</a></li>
+              <li><a href="">Teleconsultation</a></li>
+              <li><a href="">HMO</a></li>
+            </ul>
+            <p><b>Insurance Partners</b></p>
+            <ul class="list-unstyled">
+              <li><a href="">SunLife Grepa</a></li>
+              <li><a href="">Insular Life</a></li>
+              <li><a href="">MAPFRE</a></li>
+              <li><a href="">Malayan</a></li>
+              <li><a href="">SGI</a></li>
+              <li><a href="">Fortune Gen</a></li>
+            </ul>
           </div>
-          <div class="col">
-            <p>Resources</p>
-            {% include components/molecules/nav.html data=site.data.navigation.footer.resources %}
+          <div class="col-lg">
+            <p><b>Kwik insurance Knowledge Hub</b></p>
+            <ul class="list-unstyled">
+              <li><a href="">Life Insurance Topics</a></li>
+              <li><a href="">Health Insurance Topics</a></li>
+              <li><a href="">Vehicle Insurance Topics</a></li>
+              <li><a href="">Accident Insurance Topics</a></li>
+              <li><a href="">Financial Literacy Topics</a></li>
+              <li><a href="">Company News</a></li>
+            </ul>
           </div>
-          <div class="col">
-            <p>Get in Touch</p>
-            <p>10-01 Fort Legend Tower, 3rd Avenue corner 31st Street, Bonifacio Global City, Taguig, 1632, Philippines</p>
+          <div class="col-lg">
+            <p><b>Payment Options</b></p>
+            <ul class="list-inline">
+              <li class="list-inline-item">Visa</li>
+              <li class="list-inline-item">Mastercard</li>
+              <li class="list-inline-item">Gcash</li>
+              <li class="list-inline-item">Over the counter</li>
+            </ul>
+            <p><b>Follow us on Social Media!</b></p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href=""><i class="uil uil-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="uil uil-twitter"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="uil uil-instagram"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="uil uil-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="uil uil-youtube"></i></a></li>
+            </ul>
+            <p><b>Contact Us</b></p>
+            <ul class="list-unstyled">
+              <li><a href="">support@kwik.insure</a></li>
+              <li><a href="">0912 345 6789</a></li>
+            </ul>
+            <p>© Kwikinsure Corporation. All rights reserved with its registered address at 10-01 Fort Legend Tower, 3rd Avenue corner 31st Street, Bonifacio Global City, Taguig, 1632, Philippines</p>
+            <ul class="list-unstyled">
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <hr>
-    <p>Copyright © 2020 Kwikinsure Corporation. All rights reserved</p>
-    <p>Use of this platform constitutes acceptance of our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
   </div>
 </footer>
 

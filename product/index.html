@@ -8,54 +8,20 @@ transition: fade
 <div class="heading text-center">
   <h1 class="heading-title h3">What kind of insurance are you interested in?</h1>
 </div>
-<div class="row">
-  <div class="col-lg-8 offset-lg-2 col-md-6 offset-md-3">
-    <div class="card-deck">
-      <a class="card" href="{{ site.baseurl }}/product/vehicle/wizard/car-detail.html">
-        <div class="row no-gutters">
-          <div class="col-auto col-lg-12">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
-              <source media="(min-width: 992px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
-              <source media="(min-width: 768px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
-              <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
-            </picture>
-          </div>
-          <div class="col col-lg-12 align-self-center">
-            <h6 class="card-title h4">Vehicle</h6>
-          </div>
-        </div>
-      </a>
-      <div class="card">
-        <div class="row no-gutters">
-          <div class="col-auto col-lg-12">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
-              <source media="(min-width: 992px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
-              <source media="(min-width: 768px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
-              <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
-            </picture>
-          </div>
-          <div class="col col-lg-12 align-self-center">
-            <h6 class="card-title h4">Health</h6>
-          </div>
+<div class="card-deck">
+  {% for products in site.data.product-category %}
+    <a class="card" href="{{ site.baseurl }}{{ products.url }}">
+      <div class="media align-self-lg-center flex-lg-column">
+        <picture class="mb-lg-3 mr-lg-0 mr-3">
+          <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
+          <source media="(min-width: 768px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
+          <source media="(min-width: 576px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
+          <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
+        </picture>
+        <div class="media-body align-self-center">
+          <h6 class="card-title h4 mb-0">{{ products.name }}</h6>
         </div>
       </div>
-      <a class="card" href="{{ site.baseurl }}/product/life-and-accident/marketplace/">
-        <div class="row no-gutters">
-          <div class="col-auto col-lg-12">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
-              <source media="(min-width: 992px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
-              <source media="(min-width: 768px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
-              <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
-            </picture>
-          </div>
-          <div class="col col-lg-12 align-self-center">
-            <h6 class="card-title h4">Life &amp; Accident</h6>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+    </a>
+  {% endfor %}
 </div>

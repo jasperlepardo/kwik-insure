@@ -1,0 +1,16 @@
+- name: Vehicle
+  description: Vehicle insurance protects you from financial losses resulting from driving incidents, damage/loss caused by fire, theft, or natural calamities.
+  image: 
+  url: /product/vehicle/wizard/insurance-type.html
+- name: Accident
+  description: Personal Accident insurance ensures you and your loved ones’ financial security in case of accidents that may result to injuries, disabilities, or death.
+  image: 
+  url:
+- name: Health
+  description: Health insurance and services covers both your expected and unexpected healthcare expenses so you can get the medical help you need.
+  image: 
+  url:
+- name: Life
+  description: Life insurance ensures anyone who is financially dependent on you in the unfortunate event of death due to illness and accidental causes.
+  image: 
+  url:

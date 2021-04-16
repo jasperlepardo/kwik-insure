@@ -1,78 +1,73 @@
 ---
 layout: default
-layout-type: container-fluid
+layout-type: #container | container-fluid
 custom-stylesheet: 
 transition: fade
 ---
 
 <div class="banner">
-  <h1 class="h3">Find the best vehicle insurance deal for you</h1>
+  <h1 class="h3">Vehicle Insurance</h1>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3 d-none d-lg-block">
-  
-    </div>
-    <div class="col-lg-9">
-      <div class="heading">
-        <div class="row">
-          <div class="col">
-            <h2 class="heading-title h4">28 car insurance plans found</h2>
-          </div>
-          <div class="col-auto">
-            <div class="form-group row">
-              <label for="exampleFormControlSelect2 col-form-label">Sort:</label>
-              <div class="col-auto">
-                <select class="form-control" id="exampleFormControlSelect2">
-                  <option>Lowest to Highest Price </option>
-                  <option>Highest to Lowest Price </option>
-                </select>
-              </div>
+<div class="row">
+  <div class="col-xl-3 d-none d-xl-block">
+    
+  </div>
+  <div class="col-xl-9">
+    <div class="heading">
+      <div class="row">
+        <div class="col">
+          <h2 class="heading-title h4">28 vehicle insurance plans found</h2>
+        </div>
+        <div class="col-auto d-none d-xl-block">
+          <div class="form-group row">
+            <label class="col-form-label" for="exampleFormControlSelect2">Sort:</label>
+            <div class="col-auto">
+              <select class="form-control" id="exampleFormControlSelect2">
+                <option>Lowest to Highest Price </option>
+                <option>Highest to Lowest Price </option>
+              </select>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    {% for product in site.vehicles %}
       <div class="card">
-        <div class="card-header">
-          <div class="media">
-            <div class="mr-3">
+        <div class="card-body">
+          <div class="media align-self-center flex-column flex-lg-row">
+            <div class="mb-3 mb-lg-0 mr-lg-3">
               <picture>
                 <source media="(max-width: 992px)" srcset="https://dummyimage.com/72x44/f1f2f3/aaaaaa">
-                <img src="https://dummyimage.com/112x63/f1f2f3/aaaaaa" alt="">
+                <img src="https://dummyimage.com/112x64/f1f2f3/aaaaaa" alt="">
               </picture>
             </div>
-            <div class="media-body">
-              <h6 class="h5">Mapfre Auto Comprehensive Plus</h6>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-  
-          <div class="row">
-            <div class="col-md">
-              <ul class="list-unstyled mb-3 mb-md-0">
-                <li>Provider: Mapfre</li>
-                <li>Deductible P 2,000</li>
-                <li>10 Years of Casa Eligibility</li>
-                <li>30 minor on-site repair shops</li>
-                <li>P 3,500,000 Maximum Total Sum Insured</li>
-              </ul>
-            </div>
-            <div class="col-md-auto align-self-end">
+            <div class="media-body align-self-center">
+              <h6 class="card-title h5">{{ product.name }}</h6>
               <div class="row">
-                <div class="col col-md-12 text-md-right">
-                  <p class="lead mb-0">₱ 17,611.06</p>
-                  <p class="small muted mb-0 mb-md-3">Total Premium</p>
+                <div class="col-xl">
+                  <ul class="list-unstyled mb-3 mb-xl-0">
+                    <li>Provider: {{ product.provider }}</li>
+                    <li>Deductible: {{ product.deductible }}</li>
+                    <li>{{ product.total-sum-insured }} Total Sum Insured</li>
+                  </ul>
                 </div>
-                <div class="col-auto col-md-12 text-md-right align-self-end">
-                  <a class="btn btn-primary" href="{{ site.baseurl }}/product/vehicle/product-details.html">View Details</a>
+                <div class="col-xl-auto align-self-end">
+                  <div class="row">
+                    <div class="col col-xl-12 text-xl-right">
+                      <p class="lead mb-0">{{ product.gross-premium }}</p>
+                      <p class="small muted mb-0 mb-xl-3">Total Premium</p>
+                    </div>
+                    <div class="col-auto col-xl-12 text-xl-right align-self-end">
+                      <a class="btn btn-primary" href="{{ site.baseurl }}{{ product.url }}">View Details</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
   </div>
 </div>

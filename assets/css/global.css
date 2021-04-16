@@ -1,11 +1,11 @@
 body {
     font-family: 'Work Sans', sans-serif;
-    padding-top: 56px;
+    /* padding-top: 56px; */
 }
 
 @media (min-width: 992px) {
     body {
-        padding-top: 72px;
+        /* padding-top: 72px; */
     }
 }
 
@@ -18,7 +18,7 @@ body {
 
 .wrapper {
     /* height: 100vh; */
-    padding: 112px 0;
+    padding: 80px 0;
 }
 
 .wrapper .heading {
@@ -34,10 +34,25 @@ body {
 }
 
 
-.heading {
-    margin-top: clamp(40px, 8%, 80px);
-    margin-bottom: clamp(24px, 4%, 40px);
+.container,.container-fluid,.container-xl,.container-lg,.container-md,.container-sm {
+    padding-right: clamp(24px, 8%, 40px);
+    padding-left: clamp(24px, 8%, 40px);
 }
+
+
+.heading {
+    padding-top: clamp(40px, 8%, 80px);
+    padding-bottom: clamp(24px, 4%, 40px);
+}
+
+.heading-title {
+    margin-bottom: 0;
+}
+
+.heading-subtitle {
+    margin-bottom: 0;
+}
+
 
 .card-deck .card {
     border: none;
@@ -88,4 +103,69 @@ dt {
 .list-group-flush>.list-group-item {
     padding-left: 0;
     padding-right: 0;
+}
+
+
+
+
+
+/********** Footer **********/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-top: 55px;
+    margin-bottom: 1673px;
+}
+
+@media (min-width: 480px) {
+    body {
+        margin-top: 60px;
+        margin-bottom: 1433px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-top: 65px;
+        /* margin-bottom: 460px; */
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        margin-top: 80px;
+        margin-bottom: 816px;
+        /* margin-bottom: 1433px; */
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        margin-bottom: 682.53px;
+    }
+}
+
+main.container {
+    padding-bottom: clamp(40px, 8%, 80px);;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    padding-top: clamp(40px, 8%, 80px);
+    padding-bottom: clamp(40px, 8%, 80px);
+    background-color: #9199B6;
+    color: #ffffff;
+}
+
+footer a, footer a:hover {
+    color: inherit;
+    text-decoration: underline;
 }

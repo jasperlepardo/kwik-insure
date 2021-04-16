@@ -1,0 +1,18 @@
+- class: nav-pills flex-column
+  type: 
+  menu:
+  - text: My Policy
+    icon: 
+    url: my-account/my-policy.html
+  - text: Review
+    icon: 
+    url: my-account/review.html
+  - text: Refer &amp; Earn
+    icon: 
+    url:  my-account/refer-and-earn.html
+  - text: Account
+    icon: 
+    url: my-account/account.html
+  - text: Family Members
+    icon: 
+    url:  my-account/family-member.html
