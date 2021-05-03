@@ -4,12 +4,21 @@
   - text: Home
     icon: 
     url: 
+  - text: About
+    icon: 
+    url: 
   - text: Product
     icon: 
     url: product/
   - text: Learn
     icon: 
     url: 
+  - text: Claims
+    icon: 
+    url: 
   - text: Contact Us
+    icon: 
+    url: 
+  - text: Help Center
     icon: 
     url: 

@@ -12,13 +12,15 @@ body {
 
 @media (min-width: 1440px) {
     body {
-        zoom: 112%;
+        /* zoom: 112%; */
     }
 }
 
 .wrapper {
     /* height: 100vh; */
-    padding: 80px 0;
+    /* padding: 80px 0; */
+    padding-top: clamp(24px, 8%, 80px);;
+    padding-bottom: clamp(24px, 8%, 80px);;
 }
 
 .wrapper .heading {
@@ -172,4 +174,44 @@ footer {
 footer a, footer a:hover {
     color: inherit;
     text-decoration: underline;
+}
+
+
+
+#main-banner {
+    background-image: url(https://images.contentstack.io/v3/assets/blt6529a38ed60e1ea5/blt483b97a375f8acf9/60764f8feea64578d07fa234/BannerImage_Desktop_R03_CB.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#product-category #product-title {
+    text-align: center;
+    background-color: rgba(57, 197, 213, 16%);
+    color: rgba(57, 197, 213, 100%);
+    padding: 12px;
+}
+
+#product-category .card {
+    overflow: hidden;
+}
+
+#product-category .card:hover #product-title {
+    text-align: center;
+    background-color: rgba(57, 197, 213, 100%);
+    color: white;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    grid-auto-flow: column;
+}
+
+#product-category {
+    grid-column: auto;
+    grid-auto-columns: 176px;
 }

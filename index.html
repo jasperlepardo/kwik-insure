@@ -5,15 +5,31 @@ custom-stylesheet:
 transition: fade
 ---
 
-<div class="wrapper">
+<div class="wrapper" id="main-banner">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-md-6">
         <div class="heading">
-          <h1 class="heading-title h1">Insurance, made simpler</h1>
+          <h1 class="heading-title h1">Insurance made simple</h1>
           <p class="heading-subtitle lead">Compare, choose, and buy from top insurance providers.</p>
         </div>
-        <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/product/">Get Started</a>
+      </div>
+      </div>
+      <div class="grid" id="product-category">
+        {% for product in site.data.product-category %}
+          <a class="card border-0" href="{{ product.url }}">
+            <div class="card-body p-2 text-center">
+              <picture>
+                <!-- <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/ffffff/aaaaaa"> -->
+                <!-- <source media="(min-width: 768px)" srcset="{{ product.image }}"> -->
+                <!-- <source media="(min-width: 576px)" srcset="{{ product.image }}"> -->
+                <img src="{{ product.image }}" alt="" height="112" width="112">
+              </picture>  
+            </div>
+            <div id="product-title">{{ product.name }}</div>
+            <!-- <a class="btn btn-link btn-block" href=""></a> -->
+          </a>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -21,27 +37,9 @@ transition: fade
 <div class="wrapper">
   <div class="container">
     <div class="heading">
-      <h2 class="heading-title h3">Let's get started</h2>
-      <p class="heading-subtitle">What type of insurance are you looking for?</p>
+      <h2 class="heading-title h3">Best Selling Products and Promos</h2>
     </div>
-    <div class="card-deck">
-      {% for products in site.data.product-category %}
-        <div class="card">
-          <div class="media align-self-lg-center flex-lg-column">
-            <picture class="mb-lg-3 mr-lg-0 mr-3">
-              <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
-              <source media="(min-width: 768px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
-              <source media="(min-width: 576px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
-              <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
-            </picture>
-            <div class="media-body align-self-center">
-              <h6 class="card-title lead">{{ products.name }}</h6>
-              <p class="card-text">{{ products.description }}</p>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+
   </div>
 </div>
 <!-- <div class="wrapper p-0">
