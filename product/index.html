@@ -9,17 +9,17 @@ transition: fade
   <h1 class="heading-title h3">What kind of insurance are you interested in?</h1>
 </div>
 <div class="card-deck">
-  {% for products in site.data.product-category %}
+  {% for product in site.data.product-category %}
     <a class="card" href="{{ site.baseurl }}{{ products.url }}">
       <div class="media align-self-lg-center flex-lg-column">
         <picture class="mb-lg-3 mr-lg-0 mr-3">
-          <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
+          <!-- <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/f1f2f3/aaaaaa">
           <source media="(min-width: 768px)" srcset="https://dummyimage.com/112/f1f2f3/aaaaaa">
-          <source media="(min-width: 576px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa">
-          <img src="https://dummyimage.com/72/f1f2f3/aaaaaa" alt="">
+          <source media="(min-width: 576px)" srcset="https://dummyimage.com/72/f1f2f3/aaaaaa"> -->
+          <img src="{{ product.image }}" alt="" height="128" width="128">
         </picture>
         <div class="media-body align-self-center">
-          <h6 class="card-title h4 mb-0">{{ products.name }}</h6>
+          <h6 class="card-title">{{ product.name }}</h6>
         </div>
       </div>
     </a>

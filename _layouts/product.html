@@ -9,26 +9,26 @@ custom-stylesheet:
 </div>
 <hr class="dashed">
 <div class="row">
-  <div class="col-xl-7">    
+  <div class="col-xl-8">    
     <ul class="list-unstyled mb-3 mb-md-0">
       <li>Provider: {{ page.provider }}</li>
       <li>Deductible: {{ page.deductible }}</li>
       <li>{{ page.total-sum-insured }} Total Sum Insured</li>
     </ul>
     <div class="heading">
-      <h2 class="heading-title h4">Coverages</h2>
+      <h6 class="heading-title">Coverages</h6>
     </div>
     <ul class="list-group list-group-flush">
       {% for coverage in page.coverages %}
       <li class="list-group-item">
         <div class="media">
           <div class="mr-3">
-            <img src="https://dummyimage.com/48/f1f2f3/aaaaaa" alt="">
+            <img src="https://dummyimage.com/80/f1f2f3/aaaaaa" alt="">
           </div>
           <div class="media-body align-self-center">
             <p class="d-flex justify-content-between mb-0"><span><b>{{ coverage.name }}</b></span><span>{{ coverage.amount }}</span></p>
             {% if coverage.inclusions %}
-              <ul class="list-unstyled mt-3">
+              <ul class="list-unstyled">
                 {% for item in coverage.inclusions %}
                 <li class="d-flex justify-content-between"><span>{{ item.name }}</span><span>{{ item.amount }}</span></li>
                 {% endfor %}  
@@ -39,19 +39,19 @@ custom-stylesheet:
       {% endfor %}
     </ul>
     <div class="heading">
-      <h2 class="heading-title h4">Complimentary Benefits</h2>
+      <h6 class="heading-title">Complimentary Benefits</h6>
     </div>
     <ul class="list-group list-group-flush">
       {% for complementary-benefit in page.complementary-benefits %}
       <li class="list-group-item">
         <div class="media">
           <div class="mr-3">
-            <img src="https://dummyimage.com/48/f1f2f3/aaaaaa" alt="">
+            <img src="https://dummyimage.com/80/f1f2f3/aaaaaa" alt="">
           </div>
           <div class="media-body align-self-center">
             <p class="d-flex justify-content-between mb-0"><span><b>{{ complementary-benefit.name }}</b></span><span>{{ complementary-benefit.amount }}</span></p>
             {% if complementary-benefit.inclusions %}
-              <ul class="list-unstyled mt-3">
+              <ul class="list-unstyled">
                 {% for item in complementary-benefit.inclusions %}
                   <li class="d-flex justify-content-between"><span>{{ item.name }}</span><span>{{ item.amount }}</span></li>
                 {% endfor %}  
@@ -62,35 +62,30 @@ custom-stylesheet:
       {% endfor %}
     </ul>
   </div>
-  <div class="col-xl-5">
+  <div class="col-xl-4">
     <div class="card">
       <div class="card-body">
-        <h6 class="card-title h4">Summary</h6>
-        <table class="table table-borderless table-sm">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th class="text-right">Coverage</th>
-              <th class="text-right">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for summary in page.summary%}
-              <tr>
-                <td>{{ summary.item }}</td>
-                <td class="text-right">{{ summary.coverage }}</td>
-                <td class="text-right">{{ summary.premium }}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Gross Premium</td>
-              <td></td>
-              <td class="text-right">{{ page.gross-premium }}</td>
-            </tr>
-          </tfoot>
-        </table>
+        <h6 class="card-title">Summary</h6>
+        <ul class="list-unstyled">
+          {% for summary in page.summary%}
+            <li >
+              <span>{{ summary.item }}</span>
+              <span>{{ summary.premium }}</span>
+              <ul class="list-unstyled">
+                {% for breakdown in summary.breakdown%}
+                  <li class="d-flex justify-content-between">
+                    <span>{{ breakdown.item }}</span>
+                    <span>{{ breakdown.premium }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+          <li class="d-flex justify-content-between">
+            <span>Gross Premium</span>
+            <span>{{ page.gross-premium }}</span>
+          </li>
+        </ul>
         <a class="btn btn-primary btn-block" href="">Get this Package</a>
       </div>
     </div>

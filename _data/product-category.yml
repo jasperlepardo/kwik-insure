@@ -18,17 +18,17 @@
 
 - name: Vehicle
   description: Vehicle insurance protects you from financial losses resulting from driving incidents, damage/loss caused by fire, theft, or natural calamities.
-  image: https://images.contentstack.io/v3/assets/blt6529a38ed60e1ea5/bltea2cd34e52141dd1/5fa4d0effaf76f509e12dcee/Icon_Car_Main_01Static_R01_PV.svg
+  image: https://dummyimage.com/128/39c5d5/ffffff
   url: /product/vehicle/wizard/insurance-type.html
 - name: Health
   description: Health insurance and services covers both your expected and unexpected healthcare expenses so you can get the medical help you need.
-  image: https://images.contentstack.io/v3/assets/blt6529a38ed60e1ea5/blt345d94cb8dc26698/60051cd86e1217102724787d/Icon_Health_Main_01Static_R01_PV.svg
+  image: https://dummyimage.com/128/39c5d5/ffffff
   url:
 - name: Life &amp; Accident
   description: Personal Accident insurance ensures you and your loved ones’ financial security in case of accidents that may result to injuries, disabilities, or death.
-  image: https://images.contentstack.io/v3/assets/blt6529a38ed60e1ea5/blt1ee616b7ceb6f7ea/6005367f4485e50f8f20850e/Icon_Accident_Main_01Static_R06_PV.svg
+  image: https://dummyimage.com/128/39c5d5/ffffff
   url:
 - name: COVID-19
   description: Life insurance ensures anyone who is financially dependent on you in the unfortunate event of death due to illness and accidental causes.
-  image: https://images.contentstack.io/v3/assets/blt6529a38ed60e1ea5/blt1ee616b7ceb6f7ea/6005367f4485e50f8f20850e/Icon_Accident_Main_01Static_R06_PV.svg
+  image: https://dummyimage.com/128/39c5d5/ffffff
   url:

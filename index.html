@@ -5,8 +5,8 @@ custom-stylesheet:
 transition: fade
 ---
 
-<div class="wrapper" id="main-banner">
-  <div class="container">
+<div class="wrapper">
+  <div class="container" id="main-banner">
     <div class="row">
       <div class="col-md-6">
         <div class="heading">
@@ -14,23 +14,30 @@ transition: fade
           <p class="heading-subtitle lead">Compare, choose, and buy from top insurance providers.</p>
         </div>
       </div>
-      </div>
-      <div class="grid" id="product-category">
-        {% for product in site.data.product-category %}
-          <a class="card border-0" href="{{ product.url }}">
-            <div class="card-body p-2 text-center">
-              <picture>
-                <!-- <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/ffffff/aaaaaa"> -->
-                <!-- <source media="(min-width: 768px)" srcset="{{ product.image }}"> -->
-                <!-- <source media="(min-width: 576px)" srcset="{{ product.image }}"> -->
-                <img src="{{ product.image }}" alt="" height="112" width="112">
-              </picture>  
-            </div>
-            <div id="product-title">{{ product.name }}</div>
-            <!-- <a class="btn btn-link btn-block" href=""></a> -->
-          </a>
-        {% endfor %}
-      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="container">
+    <div class="heading">
+      <h2 class="heading-title h3">What type of insurance are you looking for?</h2>
+    </div>
+    <div class="grid" id="product-category">
+      {% for product in site.data.product-category %}
+        <div class="card border-0" href="{{ product.url }}">
+          <div class="card-body p-3 text-center">
+            <picture class="mb-3">
+              <!-- <source media="(min-width: 992px)" srcset="https://dummyimage.com/176/ffffff/aaaaaa"> -->
+              <!-- <source media="(min-width: 768px)" srcset="{{ product.image }}"> -->
+              <!-- <source media="(min-width: 576px)" srcset="{{ product.image }}"> -->
+              <img src="{{ product.image }}" alt="" height="128" width="128">
+            </picture>
+            <h6>{{ product.name }}</h6>
+            <p>{{ product.description }}</p>
+          </div>
+          <a class="btn btn-link btn-block" href="">See Products</a>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>

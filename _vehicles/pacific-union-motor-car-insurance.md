@@ -57,27 +57,25 @@ complementary-benefits:
     amount: 
 important-notes:
 summary:
-- item: Own Damage / Theft
-  coverage: '650,000'
-  premium: '8,125.00'
-- item: Bodiliy Injury
-  coverage: '50,000'
-  premium: '195.00'
-- item: Property Damage
-  coverage: '50,000'
-  premium: '975.00'
-- item: Auto Passenger Accident
-  coverage: '350,000'
-  premium: 'FREE'
-- item: Acts of Nature
-  coverage: '650,000'
-  premium: '3,250.00'
-- item:
-  coverage:
-  premium:
 - item: Basic Premium
   coverage: 
   premium: '12,545.00'
+  breakdown:
+    - item: Own Damage / Theft
+      coverage: '650,000'
+      premium: '8,125.00'
+    - item: Bodiliy Injury
+      coverage: '50,000'
+      premium: '195.00'
+    - item: Property Damage
+      coverage: '50,000'
+      premium: '975.00'
+    - item: Auto Passenger Accident
+      coverage: '350,000'
+      premium: 'FREE'
+    - item: Acts of Nature
+      coverage: '650,000'
+      premium: '3,250.00'
 - item: Documentary Stamp Tax
   coverage: 
   premium: '1,568.13'

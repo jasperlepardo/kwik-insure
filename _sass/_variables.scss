@@ -64,23 +64,25 @@ $colors: map-merge(
   $colors
 );
 
-$kwik-blue: #4CAAFF !default;
-$kwik-teal: #39C5D5 !default;
+$kwik-blue:               #4CAAFF !default;
+$kwik-teal:               #39C5D5 !default;
 
-$kwik-light-blue: #84C7DC !default;
-$kwik-cream: #FFEFD6 !default;
-$kwik-light-gray: #BABFD1 !default;
-$kwik-medium-gray: #9199B6 !default;
-$kwik-dark-gray: #666666 !default;
-$kwik-yellow: #FFC130 !default;
+$kwik-light-blue:         #84C7DC !default;
+$kwik-cream:              #FFEFD6 !default;
+$kwik-light-gray:         #BABFD1 !default;
+$kwik-medium-gray:        #9199B6 !default;
+$kwik-dark-gray:          #666666 !default;
+$kwik-green:              #31C495 !default;
+$kwik-yellow:             #FFC130 !default;
+$kwik-red:                #D14775 !default;
 
 $primary:       $kwik-blue !default;
-$secondary:     $kwik-light-gray !default;
-$success:       $kwik-teal !default;
-$info:          $kwik-light-blue !default;
+$secondary:     $kwik-teal !default;
+$success:       $kwik-green !default;
+$info:          $kwik-medium-gray !default;
 $warning:       $kwik-yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
+$danger:        $kwik-red !default;
+$light:         $kwik-light-gray !default;
 $dark:          $kwik-dark-gray !default;
 
 $theme-colors: () !default;
@@ -207,7 +209,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1400px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -222,7 +225,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
+  xxl: 1320px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -295,25 +299,25 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
-$font-weight-lighter:         400 !default;
-$font-weight-light:           400 !default;
+$font-weight-lighter:         200 !default;
+$font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            600 !default;
+$font-weight-bold:            500 !default;
 $font-weight-bolder:          600 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 3.5 !default;
-$h2-font-size:                $font-size-base * 2.75 !default;
-$h3-font-size:                $font-size-base * 2 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 4 !default;
+$h2-font-size:                $font-size-base * 3.25 !default;
+$h3-font-size:                $font-size-base * 2.5 !default;
+$h4-font-size:                $font-size-base * 2 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base * 1.25!default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        400 !default;
+$headings-font-weight:        $font-weight-light !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -328,7 +332,7 @@ $display3-weight:             400 !default;
 $display4-weight:             400 !default;
 $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-size:              $font-size-base * 1.125 !default;
 $lead-font-weight:            400 !default;
 
 $small-font-size:             80% !default;
@@ -441,7 +445,7 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -836,8 +840,8 @@ $jumbotron-bg:                      $gray-200 !default;
 
 // Cards
 
-$card-spacer-y:                     1.5rem !default;
-$card-spacer-x:                     1.5rem !default;
+$card-spacer-y:                     1rem !default;
+$card-spacer-x:                     1rem !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 $border-color !default;
